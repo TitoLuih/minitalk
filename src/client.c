@@ -6,7 +6,7 @@
 /*   By: lruiz-to <lruiz-to@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 12:31:28 by lruiz-to          #+#    #+#             */
-/*   Updated: 2025/05/29 19:03:13 by lruiz-to         ###   ########.fr       */
+/*   Updated: 2025/05/29 19:08:30 by lruiz-to         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	send_signal(int pid, char msg)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < 8)
@@ -24,7 +24,7 @@ static void	send_signal(int pid, char msg)
 		else
 			kill(pid, SIGUSR2);
 		i++;
-		usleep(50);			
+		usleep(50);
 	}
 }
 
@@ -33,7 +33,8 @@ int	main(int argc, char **argv)
 	int		p_id;
 	char	*msg;
 	int		i;
-	if (argc =! 3)
+
+	if (argc != 3)
 	{
 		ft_error("Maybe try <PID> <Message>");
 		exit(0);
