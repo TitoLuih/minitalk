@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lruiz-to <lruiz-to@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/27 12:31:37 by lruiz-to          #+#    #+#             */
-/*   Updated: 2025/05/29 17:20:25 by lruiz-to         ###   ########.fr       */
+/*   Created: 2025/05/29 12:13:58 by lruiz-to          #+#    #+#             */
+/*   Updated: 2025/05/29 16:03:19 by lruiz-to         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#ifndef MINITALK_H
+#define MINITALK_H
 
-int	main (void)
-{
-	ft_printf("%d\n", getpid());
-	while (1)
-		pause();
-	return (EXIT_SUCCESS);
-}
+# include <unistd.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <signal.h>
+# include "../libft/libft.h"
+
+#endif
