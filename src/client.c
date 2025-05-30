@@ -24,7 +24,7 @@ static void	send_signal(int pid, char msg)
 		else
 			kill(pid, SIGUSR2);
 		i++;
-		usleep(50);
+		usleep(1000);
 	}
 }
 

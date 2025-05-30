@@ -17,7 +17,6 @@ void	handler(int signal)
 	static int	character;
 	static int	counter;
 
-	counter = 0;
 	if (signal == SIGUSR1)
 		character |= (1 << counter);
 	counter++;
