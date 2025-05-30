@@ -6,7 +6,7 @@
 /*   By: lruiz-to <lruiz-to@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 12:31:28 by lruiz-to          #+#    #+#             */
-/*   Updated: 2025/05/29 19:08:30 by lruiz-to         ###   ########.fr       */
+/*   Updated: 2025/05/30 12:11:29 by lruiz-to         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_error("Maybe try <PID> <Message>");
+		ft_printf("Maybe try <PID> <Message>");
 		exit(0);
 	}
 	p_id = ft_atoi(argv[1]);
@@ -47,6 +47,6 @@ int	main(int argc, char **argv)
 		send_signal(p_id, msg[i]);
 		i++;
 	}
-	send_signal(p_id, "\0");
+	send_signal(p_id, '\0');
 	return (EXIT_SUCCESS);
 }
