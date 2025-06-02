@@ -24,14 +24,13 @@ static void	send_signal(int pid, char msg)
 		else
 			kill(pid, SIGUSR2);
 		i++;
-		usleep(1000);
+		usleep(500);
 	}
 }
 
 int	main(int argc, char **argv)
 {
 	int		p_id;
-	char	*msg;
 	int		i;
 
 	if (argc != 3)
@@ -40,11 +39,10 @@ int	main(int argc, char **argv)
 		exit(0);
 	}
 	p_id = ft_atoi(argv[1]);
-	msg = argv[2];
 	i = 0;
-	while (msg[i])
+	while (argv[2])
 	{
-		send_signal(p_id, msg[i]);
+		send_signal(p_id, argv[2][i]);
 		i++;
 	}
 	send_signal(p_id, '\0');

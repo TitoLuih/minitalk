@@ -21,11 +21,11 @@ $(LIBFT_A):
 
 server: $(LIBFT_A) $(SRC_SERVER)
 	@cc $(CFLAGS) -o $(NAME_SERVER) $(SRC_SERVER) $(LIBFT_A)
-	@echo "\nServer executable created\n"
+	@echo "Server executable created"
 
 client: $(LIBFT_A) $(SRC_CLIENT)
 	@cc $(CFLAGS) -o $(NAME_CLIENT) $(SRC_CLIENT) $(LIBFT_A)
-	@echo "\nClient executable created\n"
+	@echo "Client executable created"
 
 clean:
 	@$(MAKE) -C $(LIBFT_PATH) clean
