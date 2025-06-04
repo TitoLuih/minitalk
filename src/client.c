@@ -19,7 +19,7 @@ static void	send_signal(int pid, char msg)
 	i = 0;
 	while (i < 8)
 	{
-		if (msg & (1 << i))
+		if ((msg & (1 << i)) != 0)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
